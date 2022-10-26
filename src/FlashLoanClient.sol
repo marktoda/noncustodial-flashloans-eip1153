@@ -14,8 +14,8 @@ interface IStartCallback {
 
 // UNAUDITED DO NOT USE
 contract FlashLoanClient is IStartCallback {
-    NonCustodialFlashLoans public constant nonCustodialFlashLoans = NonCustodialFlashLoans(0x7E0F7ea63961F014Fb7c55a0bC3A6f4C3aF7506b);
-    ERC20 public constant token = ERC20(0xD135DcBBb82620dCe2605aC40385BfE720a48676);
+    NonCustodialFlashLoans public constant nonCustodialFlashLoans = NonCustodialFlashLoans(0x0206C69ED71Cb6Aa27D551E6Ae196B413A092FF6);
+    ERC20 public constant token = ERC20(0xE9D8E921a8e0FD1fFf80cc56f49bf7230F62799E);
 
     /// @notice Weird lame flash loan where we borrow and insta pay back
     function borrowAndMint() external {

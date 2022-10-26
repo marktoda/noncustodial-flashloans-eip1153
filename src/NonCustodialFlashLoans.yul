@@ -32,7 +32,7 @@ object "NonCustodialFlashLoans_18085" {
                         /// @src 6:522:523  "1"
                         let _5 := 0x01
                         /// @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..."
-                        if not(iszero(/** @src 6:512:523  "locked == 1" */ verbatim_1i_1o(hex"b3", _4)))
+                        if iszero(/** @src 6:512:523  "locked == 1" */ eq(/** @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..." */ verbatim_1i_1o(hex"b3", _4), /** @src 6:522:523  "1" */ _4))
                         /// @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..."
                         {
                             mstore(_1, shl(229, 4594637))
