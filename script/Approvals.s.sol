@@ -6,7 +6,7 @@ import {MockERC20} from "../src/MockERC20.sol";
 import {NonCustodialFlashLoans} from "../src/NonCustodialFlashLoans.sol";
 
 contract CounterScript is Script {
-    NonCustodialFlashLoans public constant nonCustodialFlashLoans = NonCustodialFlashLoans(0x78aad82bAD32B755FA56B5F9822BE10e4809CfCb);
+    NonCustodialFlashLoans public constant nonCustodialFlashLoans = NonCustodialFlashLoans(0x7E0F7ea63961F014Fb7c55a0bC3A6f4C3aF7506b);
 
     function setUp() public {}
 

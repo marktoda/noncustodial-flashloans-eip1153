@@ -32,7 +32,7 @@ object "NonCustodialFlashLoans_18085" {
                         /// @src 6:522:523  "1"
                         let _5 := 0x01
                         /// @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..."
-                        if iszero(/** @src 6:512:523  "locked == 1" */ eq(/** @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..." */ sload(_4), /** @src 6:522:523  "1" */ _5))
+                        if not(iszero(/** @src 6:512:523  "locked == 1" */ verbatim_1i_1o(hex"b3", _4)))
                         /// @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..."
                         {
                             mstore(_1, shl(229, 4594637))
@@ -44,7 +44,7 @@ object "NonCustodialFlashLoans_18085" {
                         /// @src 6:558:559  "2"
                         let _6 := 0x02
                         /// @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..."
-                        sstore(_4, /** @src 6:558:559  "2" */ _6)
+                        verbatim_2i_0o(hex"b4", _4, /** @src 6:558:559  "2" */ _6)
                         /// @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..."
                         verbatim_2i_0o(hex"b4",/** @src 6:522:523  "1" */ _5, /** @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..." */ or(and(verbatim_1i_1o(hex"b3",/** @src 6:522:523  "1" */ _5), /** @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..." */ shl(160, 0xffffffffffffffffffffffff)), /** @src 8:1186:1196  "msg.sender" */ caller()))
                         /// @src 8:1321:1355  "IStartCallback(msg.sender).start()"
@@ -155,7 +155,6 @@ object "NonCustodialFlashLoans_18085" {
                                 revert(memPtr_1, 132)
                             }
                         }
-                        sstore(_4, /** @src 6:522:523  "1" */ _5)
                         /// @src 8:528:4420  "contract NonCustodialFlashLoans is ReentrancyGuard {..."
                         return(_4, _4)
                     }
