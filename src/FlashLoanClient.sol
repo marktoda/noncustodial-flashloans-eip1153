@@ -5,6 +5,13 @@ import {ERC20} from "solmate/tokens/ERC20.sol";
 import {ReentrancyGuard} from "solmate/utils/ReentrancyGuard.sol";
 import {NonCustodialFlashLoans} from "./NonCustodialFlashLoans.sol";
 
+interface IStartCallback {
+    /// @notice Called on the `msg.sender` to hand over control to them.
+    /// Expectation is that msg.sender#start will borrow tokens using NonCustodialFlashLoans#borrow,
+    /// then return them to the original user before control is handed back to #start.
+    function start() external;
+}
+
 // UNAUDITED DO NOT USE
 contract FlashLoanClient is IStartCallback {
     NonCustodialFlashLoans public constant nonCustodialFlashLoans = NonCustodialFlashLoans(0x5D58879007BbBC0D3D20C0408dA2ada7b5F5bB10);
